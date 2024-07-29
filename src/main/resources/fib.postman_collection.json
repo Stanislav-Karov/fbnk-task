@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "51b3bf57-3dcf-4e63-99fe-43e66004f866",
+		"name": "fib",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "18463275"
+	},
+	"item": [
+		{
+			"name": "1. WITHDRAWAL",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "FIB-X-AUTH",
+						"value": "f9Uie8nNf112hx8s",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"type\": \"WITHDRAWAL\",\r\n  \"currency\": \"EUR\",\r\n  \"amount\": 500,\r\n  \"denominations\": [\r\n    {\r\n      \"value\": 10,\r\n      \"count\": 50\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/v1/cash-operation"
+			},
+			"response": []
+		},
+		{
+			"name": "2. WITHDRAWAL",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": {}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "FIB-X-AUTH",
+						"value": "f9Uie8nNf112hx8s",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"type\": \"WITHDRAWAL\",\r\n  \"currency\": \"EUR\",\r\n  \"amount\": 500,\r\n  \"denominations\": [\r\n    {\r\n      \"value\": 10,\r\n      \"count\": 50\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/v1/cash-operation"
+			},
+			"response": []
+		},
+		{
+			"name": "3. DEPOSIT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "FIB-X-AUTH",
+						"value": "f9Uie8nNf112hx8s",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"type\": \"DEPOSIT\",\r\n  \"currency\": \"BGN\",\r\n  \"amount\": 600,\r\n \"denominations\": [\r\n    {\r\n      \"value\": 10,\r\n      \"count\": 10\r\n    },\r\n    {\r\n      \"value\": 50,\r\n      \"count\": 10\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/v1/cash-operation"
+			},
+			"response": []
+		},
+		{
+			"name": "4. DEPOSIT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "FIB-X-AUTH",
+						"value": "f9Uie8nNf112hx8s",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"type\": \"DEPOSIT\",\r\n  \"currency\": \"EUR\",\r\n  \"amount\": 200,\r\n  \"denominations\": [\r\n    {\r\n      \"value\": 20,\r\n      \"count\": 5\r\n    },\r\n    {\r\n      \"value\": 50,\r\n      \"count\": 2\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/v1/cash-operation"
+			},
+			"response": []
+		},
+		{
+			"name": "5. CHECK BALANCE",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "FIB-X-AUTH",
+						"value": "f9Uie8nNf112hx8s",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": "http://localhost:8080/api/v1/cash-balance"
+			},
+			"response": []
+		}
+	]
+}
