@@ -1,6 +1,6 @@
 package org.example.cashdesk.controller;
 
-import jakarta.validation.Valid;
+import javax.validation.Valid;
 import org.example.cashdesk.model.CashBalance;
 import org.example.cashdesk.model.CashOperation;
 import org.example.cashdesk.service.CashOperationService;
